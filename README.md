@@ -32,6 +32,9 @@ Flutter: 3.8.6
 
 Cómo Ejecutar
 git clone https://github.com/miguel-arbelaez-dev/flutter_recipes_clean_streams.git
+
 cd flutter_recipes_clean_streams
+
 flutter pub get
+
 flutter run

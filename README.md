@@ -41,7 +41,7 @@ Versión de Flutter: 3.8.6
 
 Clonar el repositorio:
 
-git clone https://github.com/tu_usuario/flutter_recipes_clean_streams.git
+git clone https://github.com/miguel-arbelaez-dev/flutter_recipes_clean_streams.git
 
 
 Entrar al proyecto:

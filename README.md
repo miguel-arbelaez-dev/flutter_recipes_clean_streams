@@ -1,13 +1,8 @@
 Flutter Recipes Clean Streams
 
-Flutter Recipes Clean Streams es una aplicación de recetas completa y profesional, desarrollada con Arquitectura Limpia (Clean Architecture) y patrón MVVM, utilizando Streams para una interfaz reactiva, escalable y modular.
+Flutter Recipes Clean Streams es una aplicación de recetas completa y profesional, desarrollada con Arquitectura Limpia (Clean Architecture) y patrón MVVM, usando Streams para una interfaz reactiva y escalable.
 
-🏠 Descripción
-
-Al abrir la aplicación, se cargan automáticamente recetas aleatorias que puedes explorar.
-También incluye un buscador de recetas, que permite consultar cualquier receta disponible en la API de Spoonacular.
-
-Dentro de cada receta, el usuario puede acceder a información detallada:
+Al abrir la app, se cargan recetas aleatorias y también se puede buscar cualquier receta en la API de Spoonacular. Dentro de cada receta se muestra información detallada:
 
 Ingredientes
 
@@ -15,53 +10,28 @@ Preparación paso a paso
 
 Información nutricional
 
-✨ Funcionalidades Clave
+Funcionalidades Clave
 
-Carga automática de recetas aleatorias al iniciar la app
+Carga automática de recetas aleatorias
 
-Búsqueda avanzada de recetas por nombre
+Búsqueda avanzada de recetas
 
-Visualización completa de cada receta
+Información completa de cada receta
 
-Interfaz reactiva gracias a Streams
+Interfaz reactiva con Streams
 
-Arquitectura escalable y modular (Clean Architecture + MVVM)
+Arquitectura modular y escalable
 
-⚙️ Notas Técnicas
+Notas Técnicas
 
-API utilizada: Spoonacular (requiere apiKey)
+API: Spoonacular (requiere apiKey)
 
-Patrón de arquitectura: MVVM con Clean Architecture
+Arquitectura: MVVM + Clean Architecture
 
-Interfaz: Reactiva con Streams
+Flutter: 3.8.6
 
-Versión de Flutter: 3.8.6
-
-🚀 Cómo Ejecutar
-
-Clonar el repositorio:
-
+Cómo Ejecutar
 git clone https://github.com/miguel-arbelaez-dev/flutter_recipes_clean_streams.git
-
-
-Entrar al proyecto:
-
 cd flutter_recipes_clean_streams
-
-
-Instalar dependencias:
-
 flutter pub get
-
-
-Ejecutar en un emulador o dispositivo físico:
-
 flutter run
-
-📂 Estructura del Proyecto (Resumen)
-
-data/ → Modelos y acceso a la API
-
-domain/ → Entidades y casos de uso
-
-presentation/ → UI, ViewModels y Streams

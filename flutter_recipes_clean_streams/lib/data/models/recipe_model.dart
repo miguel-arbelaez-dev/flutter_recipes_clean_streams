@@ -76,20 +76,21 @@ class RecipeModel extends Recipe {
          summary: summary,
          winePairing: winePairing,
        );
+
   factory RecipeModel.fromMap(Map<String, dynamic> json) => RecipeModel(
-    id: json["id"],
+    id: (json["id"] as num?)?.toInt(),
     title: json["title"],
     image: json["image"],
     imageType: json["imageType"],
-    servings: json["servings"],
-    readyInMinutes: json["readyInMinutes"],
+    servings: (json["servings"] as num?)?.toInt(),
+    readyInMinutes: (json["readyInMinutes"] as num?)?.toInt(),
     license: json["license"],
     sourceName: json["sourceName"],
     sourceUrl: json["sourceUrl"],
     spoonacularSourceUrl: json["spoonacularSourceUrl"],
-    healthScore: json["healthScore"],
-    spoonacularScore: json["spoonacularScore"],
-    pricePerServing: json["pricePerServing"]?.toDouble(),
+    healthScore: (json["healthScore"] as num?)?.toInt(),
+    spoonacularScore: (json["spoonacularScore"] as num?)?.toInt(),
+    pricePerServing: (json["pricePerServing"] as num?)?.toDouble(),
     analyzedInstructions: json["analyzedInstructions"] == null
         ? []
         : List<dynamic>.from(json["analyzedInstructions"]!.map((x) => x)),
@@ -116,7 +117,8 @@ class RecipeModel extends Recipe {
     veryHealthy: json["veryHealthy"],
     veryPopular: json["veryPopular"],
     whole30: json["whole30"],
-    weightWatcherSmartPoints: json["weightWatcherSmartPoints"],
+    weightWatcherSmartPoints: (json["weightWatcherSmartPoints"] as num?)
+        ?.toInt(),
     dishTypes: json["dishTypes"] == null
         ? []
         : List<String>.from(json["dishTypes"]!.map((x) => x)),
@@ -213,9 +215,9 @@ class ExtendedIngredient {
   factory ExtendedIngredient.fromMap(Map<String, dynamic> json) =>
       ExtendedIngredient(
         aisle: json["aisle"],
-        amount: json["amount"]?.toDouble(),
+        amount: (json["amount"] as num?)?.toDouble(),
         consitency: json["consitency"],
-        id: json["id"],
+        id: (json["id"] as num?)?.toInt(),
         image: json["image"],
         measures: json["measures"] == null
             ? null
@@ -269,7 +271,7 @@ class Metric {
   Metric({this.amount, this.unitLong, this.unitShort});
 
   factory Metric.fromMap(Map<String, dynamic> json) => Metric(
-    amount: json["amount"]?.toDouble(),
+    amount: (json["amount"] as num?)?.toDouble(),
     unitLong: json["unitLong"],
     unitShort: json["unitShort"],
   );
@@ -335,14 +337,14 @@ class ProductMatch {
   });
 
   factory ProductMatch.fromMap(Map<String, dynamic> json) => ProductMatch(
-    id: json["id"],
+    id: (json["id"] as num?)?.toInt(),
     title: json["title"],
     description: json["description"],
     price: json["price"],
     imageUrl: json["imageUrl"],
-    averageRating: json["averageRating"]?.toDouble(),
-    ratingCount: json["ratingCount"].toInt(),
-    score: json["score"]?.toDouble(),
+    averageRating: (json["averageRating"] as num?)?.toDouble(),
+    ratingCount: (json["ratingCount"] as num?)?.toInt(),
+    score: (json["score"] as num?)?.toDouble(),
     link: json["link"],
   );
 
